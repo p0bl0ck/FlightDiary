@@ -1,0 +1,54 @@
+{
+  "airlines": [
+    {
+      "iata": "LX",
+      "name": "SWISS",
+      "country": "CH"
+    },
+    {
+      "iata": "LH",
+      "name": "Lufthansa",
+      "country": "DE"
+    },
+    {
+      "iata": "BA",
+      "name": "British Airways",
+      "country": "GB"
+    },
+    {
+      "iata": "EK",
+      "name": "Emirates",
+      "country": "AE"
+    },
+    {
+      "iata": "EY",
+      "name": "Etihad Airways",
+      "country": "AE"
+    },
+    {
+      "iata": "SQ",
+      "name": "Singapore Airlines",
+      "country": "SG"
+    },
+    {
+      "iata": "QR",
+      "name": "Qatar Airways",
+      "country": "QA"
+    },
+    {
+      "iata": "OZ",
+      "name": "Asiana Airlines",
+      "country": "KR"
+    },
+    {
+      "iata": "KE",
+      "name": "Korean Air",
+      "country": "KR"
+    },
+    {
+      "iata": "NH",
+      "name": "ANA",
+      "country": "JP"
+    }
+  ]
+}

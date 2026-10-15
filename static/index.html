@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore airports and manage your flight routes">
+    <title>FlightPlanner · Route explorer</title>
+    <link rel="stylesheet" href="/vendor/maplibre-gl/maplibre-gl.css" />
+    <link rel="stylesheet" href="/style.css">
+    <script src="/organization.js" defer></script>
+    <script src="/map.js" defer></script>
+    <script src="/app.js" defer></script>
+</head>
+
+<body>
+    <main class="workspace">
+        <aside class="sidebar" aria-label="Route explorer">
+            <header class="sidebar-header">
+                <a href="/" class="brand"><span class="brand-icon" aria-hidden="true">↗</span> FlightPlanner</a>
+                <p>Your routes, at a glance.</p>
+            </header>
+            <div class="sidebar-content">
+                <section class="route-search" aria-label="Search routes and airports">
+                    <label for="route-search">Search routes and airports</label>
+                    <div class="search-input-row"><input id="route-search" type="search" placeholder="City, airport code or airline" autocomplete="off" disabled><button id="clear-search" type="button" aria-label="Clear search" title="Clear search" hidden>×</button></div>
+                    <div id="airport-search-results" hidden>
+                        <p id="airport-search-status" role="status"></p>
+                        <ul id="airport-search-list" aria-label="Matching airports"></ul>
+                    </div>
+                </section>
+                <div class="routes-heading"><h1>Routes</h1><button id="clear-route" type="button" hidden>Clear selection</button></div>
+                <section class="organization-controls" aria-label="Collections and tags">
+                    <label for="collection-filter">Collection</label>
+                    <select id="collection-filter" disabled><option value="">All routes</option></select>
+                    <p id="collection-tags" class="tag-chips"></p>
+                    <div class="organization-actions"><button id="edit-collection" type="button" disabled>Edit collection</button><button id="new-collection" type="button" disabled>New collection</button><button id="manage-tags" type="button" disabled>Manage tags</button></div>
+                    <label for="tag-filter">Route tag</label>
+                    <select id="tag-filter" disabled><option value="">All tags</option></select>
+                    <p id="organization-status" role="status"></p>
+                </section>
+                <div class="add-route-panel"><button id="open-route-dialog" type="button" disabled><span aria-hidden="true">＋</span> Add a route</button></div>
+                <p id="route-feedback" role="status"></p>
+                <p id="route-order-note" role="status" hidden></p>
+                <p id="routes-status" role="status">Loading routes…</p>
+                <ul id="route-list" aria-label="Available routes"></ul>
+            </div>
+            <footer class="sidebar-footer"><span>FlightPlanner</span><button id="open-tools" type="button">Server tools</button></footer>
+        </aside>
+        <section class="map-panel" aria-label="Airport and route map">
+            <div id="map" aria-label="Interactive airport map"></div>
+            <div class="map-caption"><span class="map-caption-icon" aria-hidden="true">↗</span><div><strong>Explore your world</strong><p id="map-status" role="status">Loading map…</p></div></div>
+            <div class="map-zoom-control">
+                <label for="map-zoom">Map zoom <output id="map-zoom-value" for="map-zoom">2.0</output></label>
+                <input id="map-zoom" type="range" min="0" max="10" step="0.5" value="2" disabled>
+            </div>
+        </section>
+    </main>
+    <dialog id="route-dialog" aria-labelledby="route-dialog-title">
+        <div class="tools-heading"><h2 id="route-dialog-title">Add a route</h2><button id="close-route-dialog" type="button">Close</button></div>
+                <form id="route-form">
+                    <fieldset id="route-fields" disabled>
+                        <legend>Add route</legend>
+                        <div class="route-fields">
+                            <div><label for="route-origin">From</label><select id="route-origin" required></select></div>
+                            <div><label for="route-destination">To</label><select id="route-destination" required></select></div>
+                            <div><label for="route-airline">Airline <span class="optional">(optional)</span></label><select id="route-airline"></select></div>
+                        </div>
+                        <div id="new-route-organization"></div>
+                        <button type="submit">Add route</button>
+                    </fieldset>
+                </form>
+        <p id="add-route-feedback" role="status"></p>
+    </dialog>
+    <dialog id="organization-dialog" aria-labelledby="organization-title">
+        <div class="tools-heading"><h2 id="organization-title">Organize routes</h2><button id="close-organization" type="button">Close</button></div>
+        <div id="organization-editor"></div>
+        <p id="organization-feedback" role="status"></p>
+    </dialog>
+    <dialog id="server-tools" aria-labelledby="tools-title">
+        <div class="tools-heading"><h2 id="tools-title">Server tools</h2><button id="close-tools" type="button" aria-label="Close server tools">Close</button></div>
+            <div class="status"><span id="indicator"></span><span id="health" role="status">Connecting…</span><small
+                    id="uptime">localhost</small></div>
+        <div class="grid">
+            <section class="panel">
+                <div class="panel-heading"><span class="number">01</span>
+                    <h2>Local connection</h2>
+                </div>
+                <p>Send a message from this app to the Python server.</p>
+                <form id="local-form"><label for="message">Message</label><textarea id="message" rows="4"
+                        required>Hello from FlightPlanner</textarea><button type="submit">Send to server
+                        <span>↗</span></button></form>
+            </section>
+            <section class="panel">
+                <div class="panel-heading"><span class="number">02</span>
+                    <h2>External API</h2>
+                </div>
+                <p>Route a request through a server-side connection.</p>
+                <form id="external-form"><label for="connection">Connection</label><select id="connection" required>
+                        <option value="">Loading…</option>
+                    </select><label for="path">Relative path <span class="optional">optional</span></label><input
+                        id="path" placeholder="e.g. flights?limit=10"><button id="external-submit" type="submit"
+                        disabled>Send GET request <span>↗</span></button></form>
+                <p id="connection-note" class="note"></p>
+            </section>
+        </div>
+        <section class="output">
+            <div class="output-heading">
+                <h2>Response</h2><span id="result-meta" role="status">Ready when you are</span>
+            </div>
+            <pre id="result" tabindex="0">Send a request to see the server response here.</pre>
+        </section>
+    </dialog>
+</body>
+</html>

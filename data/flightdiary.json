@@ -1,0 +1,427 @@
+{
+  "routes": [
+    {
+      "origin": "ZRH",
+      "destination": "DXB",
+      "airline": "EK"
+    },
+    {
+      "origin": "DXB",
+      "destination": "HKG",
+      "airline": "EK"
+    },
+    {
+      "origin": "DXB",
+      "destination": "KIX",
+      "airline": "EK"
+    },
+    {
+      "origin": "DXB",
+      "destination": "ICN",
+      "airline": "EK"
+    },
+    {
+      "origin": "DXB",
+      "destination": "PVG",
+      "airline": "EK"
+    },
+    {
+      "origin": "DXB",
+      "destination": "NRT",
+      "airline": "EK"
+    },
+    {
+      "origin": "DXB",
+      "destination": "CMN",
+      "airline": "EK"
+    },
+    {
+      "origin": "DXB",
+      "destination": "JNB",
+      "airline": "EK"
+    },
+    {
+      "origin": "DXB",
+      "destination": "MRU",
+      "airline": "EK"
+    },
+    {
+      "origin": "DXB",
+      "destination": "CAI",
+      "airline": "EK"
+    },
+    {
+      "origin": "DXB",
+      "destination": "YYZ",
+      "airline": "EK"
+    },
+    {
+      "origin": "DXB",
+      "destination": "SIN",
+      "airline": "EK"
+    },
+    {
+      "origin": "AUH",
+      "destination": "SIN",
+      "airline": "EY"
+    },
+    {
+      "origin": "AUH",
+      "destination": "NRT",
+      "airline": "EY"
+    },
+    {
+      "origin": "SIN",
+      "destination": "PVG",
+      "airline": "SQ"
+    },
+    {
+      "origin": "SIN",
+      "destination": "HKG",
+      "airline": "SQ"
+    },
+    {
+      "origin": "SIN",
+      "destination": "DXB",
+      "airline": "SQ"
+    },
+    {
+      "origin": "LHR",
+      "destination": "JNB",
+      "airline": "BA"
+    },
+    {
+      "origin": "LHR",
+      "destination": "MIA",
+      "airline": "BA"
+    },
+    {
+      "origin": "LHR",
+      "destination": "SIN",
+      "airline": "BA"
+    },
+    {
+      "origin": "DOH",
+      "destination": "SIN",
+      "airline": "QR"
+    },
+    {
+      "origin": "ICN",
+      "destination": "NRT",
+      "airline": "OZ"
+    },
+    {
+      "origin": "ICN",
+      "destination": "NRT",
+      "airline": "KE"
+    },
+    {
+      "origin": "NRT",
+      "destination": "HNL",
+      "airline": "NH"
+    },
+    {
+      "origin": "ZRH",
+      "destination": "ICN",
+      "airline": ""
+    },
+    {
+      "origin": "ICN",
+      "destination": "SIN",
+      "airline": ""
+    },
+    {
+      "origin": "SIN",
+      "destination": "SYD",
+      "airline": ""
+    },
+    {
+      "origin": "SYD",
+      "destination": "HNL",
+      "airline": ""
+    },
+    {
+      "origin": "HNL",
+      "destination": "ANC",
+      "airline": ""
+    },
+    {
+      "origin": "ANC",
+      "destination": "SEA",
+      "airline": ""
+    },
+    {
+      "origin": "SEA",
+      "destination": "MEX",
+      "airline": ""
+    },
+    {
+      "origin": "MEX",
+      "destination": "MAD",
+      "airline": ""
+    },
+    {
+      "origin": "MAD",
+      "destination": "RAK",
+      "airline": ""
+    },
+    {
+      "origin": "RAK",
+      "destination": "ZRH",
+      "airline": ""
+    },
+    {
+      "origin": "ZRH",
+      "destination": "NRT",
+      "airline": ""
+    },
+    {
+      "origin": "NRT",
+      "destination": "HNL",
+      "airline": ""
+    },
+    {
+      "origin": "KEF",
+      "destination": "ZRH",
+      "airline": ""
+    },
+    {
+      "origin": "ICN",
+      "destination": "HNL",
+      "airline": ""
+    },
+    {
+      "origin": "MAD",
+      "destination": "ZRH",
+      "airline": ""
+    },
+    {
+      "origin": "ANC",
+      "destination": "YVR",
+      "airline": ""
+    },
+    {
+      "origin": "YVR",
+      "destination": "KEF",
+      "airline": ""
+    }
+  ],
+  "collections": [
+    {
+      "id": "ed9981fc99d54872b3597bddf05e3182",
+      "routes": [
+        "ZRH:DXB:EK",
+        "DXB:HKG:EK",
+        "NRT:HNL:NH",
+        "ICN:NRT:KE",
+        "ICN:NRT:OZ",
+        "LHR:SIN:BA",
+        "DOH:SIN:QR",
+        "LHR:MIA:BA",
+        "LHR:JNB:BA",
+        "SIN:DXB:SQ",
+        "SIN:HKG:SQ",
+        "SIN:PVG:SQ",
+        "AUH:NRT:EY",
+        "AUH:SIN:EY",
+        "DXB:SIN:EK",
+        "DXB:YYZ:EK",
+        "DXB:CAI:EK",
+        "DXB:MRU:EK",
+        "DXB:JNB:EK",
+        "DXB:CMN:EK",
+        "DXB:NRT:EK",
+        "DXB:PVG:EK",
+        "DXB:ICN:EK",
+        "DXB:KIX:EK"
+      ],
+      "tag_ids": [],
+      "name": "Airbus A380"
+    },
+    {
+      "id": "b32cc3af9b4a46df8601e1a7568f6a78",
+      "routes": [
+        "ZRH:ICN:",
+        "ICN:SIN:",
+        "SIN:SYD:",
+        "SYD:HNL:",
+        "HNL:ANC:",
+        "ANC:SEA:",
+        "SEA:MEX:",
+        "MEX:MAD:",
+        "MAD:RAK:",
+        "RAK:ZRH:"
+      ],
+      "tag_ids": [
+        "696cf93512564c8e9854d977b6e34662"
+      ],
+      "name": "Around The World 1 (Singapore, Australia)"
+    },
+    {
+      "id": "53e13896ebc74d8ab0736c6dae369197",
+      "routes": [
+        "ZRH:NRT:",
+        "NRT:HNL:",
+        "KEF:ZRH:",
+        "HNL:ANC:",
+        "ANC:YVR:",
+        "YVR:KEF:"
+      ],
+      "tag_ids": [
+        "696cf93512564c8e9854d977b6e34662"
+      ],
+      "name": "Around The World 2"
+    },
+    {
+      "id": "d98ef474cbe847dcb837730c23001fc3",
+      "routes": [
+        "ZRH:ICN:",
+        "HNL:ANC:",
+        "ANC:SEA:",
+        "SEA:MEX:",
+        "MEX:MAD:",
+        "ICN:HNL:",
+        "MAD:ZRH:"
+      ],
+      "tag_ids": [
+        "696cf93512564c8e9854d977b6e34662"
+      ],
+      "name": "Around The World 1 (Simpler)"
+    }
+  ],
+  "tags": [
+    {
+      "id": "14479949f8d541c29afad1e4267e6e1a",
+      "name": "A380"
+    },
+    {
+      "id": "696cf93512564c8e9854d977b6e34662",
+      "name": "RTW"
+    }
+  ],
+  "route_tags": {
+    "ZRH:DXB:EK": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "ZRH:ICN:": [
+      "696cf93512564c8e9854d977b6e34662"
+    ],
+    "DXB:HKG:EK": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "NRT:HNL:NH": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "ICN:NRT:KE": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "ICN:NRT:OZ": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "LHR:SIN:BA": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "DOH:SIN:QR": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "LHR:MIA:BA": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "LHR:JNB:BA": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "SIN:DXB:SQ": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "SIN:HKG:SQ": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "SIN:PVG:SQ": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "AUH:NRT:EY": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "AUH:SIN:EY": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "DXB:SIN:EK": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "DXB:YYZ:EK": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "DXB:CAI:EK": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "DXB:MRU:EK": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "DXB:JNB:EK": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "DXB:CMN:EK": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "DXB:NRT:EK": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "DXB:PVG:EK": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "DXB:ICN:EK": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "DXB:KIX:EK": [
+      "14479949f8d541c29afad1e4267e6e1a"
+    ],
+    "ICN:SIN:": [
+      "696cf93512564c8e9854d977b6e34662"
+    ],
+    "SIN:SYD:": [
+      "696cf93512564c8e9854d977b6e34662"
+    ],
+    "SYD:HNL:": [
+      "696cf93512564c8e9854d977b6e34662"
+    ],
+    "HNL:ANC:": [
+      "696cf93512564c8e9854d977b6e34662"
+    ],
+    "ANC:SEA:": [
+      "696cf93512564c8e9854d977b6e34662"
+    ],
+    "SEA:MEX:": [
+      "696cf93512564c8e9854d977b6e34662"
+    ],
+    "MEX:MAD:": [
+      "696cf93512564c8e9854d977b6e34662"
+    ],
+    "MAD:RAK:": [
+      "696cf93512564c8e9854d977b6e34662"
+    ],
+    "RAK:ZRH:": [
+      "696cf93512564c8e9854d977b6e34662"
+    ],
+    "ZRH:NRT:": [
+      "696cf93512564c8e9854d977b6e34662"
+    ],
+    "NRT:HNL:": [
+      "696cf93512564c8e9854d977b6e34662"
+    ],
+    "KEF:ZRH:": [
+      "696cf93512564c8e9854d977b6e34662"
+    ],
+    "ICN:HNL:": [
+      "696cf93512564c8e9854d977b6e34662"
+    ],
+    "MAD:ZRH:": [
+      "696cf93512564c8e9854d977b6e34662"
+    ],
+    "ANC:YVR:": [
+      "696cf93512564c8e9854d977b6e34662"
+    ],
+    "YVR:KEF:": [
+      "696cf93512564c8e9854d977b6e34662"
+    ]
+  }
+}
